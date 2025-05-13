@@ -16,5 +16,9 @@ public record EmployeeProject(Integer empId,
         }
         return this.dateFrom.compareTo(o.dateFrom());
     }
+
+    public EmployeeProject withDateTo(LocalDate newDateTo) {
+        return new EmployeeProject(this.empId, this.projectId, this.dateFrom, newDateTo);
+    }
 }
 
